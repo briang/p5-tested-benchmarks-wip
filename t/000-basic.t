@@ -1,17 +1,17 @@
 #!/usr/bin/env perl
 
-use 5.10.1;
+use v5.18;
 
 use strict;
 use warnings;
 
 use Test::More;
 
-use BRIANG::Dist::Perfect;
+use Tested::Benchmarks;
 
-my $C = BRIANG::Dist::Perfect->new();
+my $C = Tested::Benchmarks->new();
 ok $C,     'new returned something';
 ok ref $C, 'new returned a reference';
-is ref $C, 'BRIANG::Dist::Perfect', 'new returned an BDP object';
+is ref $C, 'Tested::Benchmarks', 'new returned an BDP object';
 
 done_testing;
